@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lose Weight Program - Food Recommendations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: rgba(16, 77, 138, 0.8);
+        }
+        h1 {
+            text-align: center;
+            color: #000000;
+        }
+        .day {
+            background-color: #c3d5ee;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgb(82, 149, 220);
+            margin-bottom: 20px;
+        }
+        .day h2 {
+            margin-top: 0;
+        }
+        .meal {
+            margin-bottom: 10px;
+        }
+        .meal h3 {
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lose Weight Program - Food Recommendations</h1>
+
+    <!-- Day 5 -->
+    <div class="day">
+        <h2>Day 5</h2>
+        <!-- Breakfast -->
+        <div class="meal">
+            <h3>Breakfast</h3>
+            <table>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                    <th>Protein (g)</th>
+                    <th>Carbs (g)</th>
+                    <th>Fat (g)</th>
+                    <th>Check</th>
+                </tr>
+                <tr>
+                    <td>Scrambled Eggs</td>
+                    <td>210</td>
+                    <td>13</td>
+                    <td>1</td>
+                    <td>17</td>
+                    <td><input type="checkbox" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Whole Wheat Toast</td>
+                    <td>80</td>
+                    <td>3</td>
+                    <td>15</td>
+                    <td>1</td>
+                    <td><input type="checkbox" class="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Snack 1 -->
+        <div class="meal">
+            <h3>Snack 1</h3>
+            <table>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                    <th>Protein (g)</th>
+                    <th>Carbs (g)</th>
+                    <th>Fat (g)</th>
+                    <th>Check</th>
+                </tr>
+                <tr>
+                    <td>Greek Yogurt</td>
+                    <td>100</td>
+                    <td>10</td>
+                    <td>6</td>
+                    <td>2</td>
+                    <td><input type="checkbox" class="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Lunch -->
+        <div class="meal">
+            <h3>Lunch</h3>
+            <table>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                    <th>Protein (g)</th>
+                    <th>Carbs (g)</th>
+                    <th>Fat (g)</th>
+                    <th>Check</th>
+                </tr>
+                <tr>
+                    <td>Grilled Chicken Breast</td>
+                    <td>230</td>
+                    <td>27</td>
+                    <td>0</td>
+                    <td>12</td>
+                    <td><input type="checkbox" class="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Snack 2 -->
+        <div class="meal">
+            <h3>Snack 2</h3>
+            <table>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                    <th>Protein (g)</th>
+                    <th>Carbs (g)</th>
+                    <th>Fat (g)</th>
+                    <th>Check</th>
+                </tr>
+                <tr>
+                    <td>Almonds</td>
+                    <td>160</td>
+                    <td>6</td>
+                    <td>6</td>
+                    <td>14</td>
+                    <td><input type="checkbox" class="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Dinner -->
+        <div class="meal">
+            <h3>Dinner</h3>
+            <table>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                    <th>Protein (g)</th>
+                    <th>Carbs (g)</th>
+                    <th>Fat (g)</th>
+                    <th>Check</th>
+                </tr>
+                <tr>
+                    <td>Salmon Fillet</td>
+                    <td>280</td>
+                    <td>22</td>
+                    <td>0</td>
+                    <td>20</td>
+                    <td><input type="checkbox" class="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Total Calories -->
+    <div id="total-calories"></div>
+
+    <!-- Receipt Button -->
+    <button onclick="generateReceipt()">Generate Receipt</button>
+
+    <script>
+        // Function to calculate total calories
+        function calculateTotalCalories() {
+            var checkboxes = document.querySelectorAll('.checkbox');
+            var totalCalories = 0;
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.checked) {
+                    var row = checkbox.parentElement.parentElement;
+                    var calories = parseInt(row.cells[1].innerText);
+                    totalCalories += calories;
+                }
+            });
+            return totalCalories;
+        }
+
+        // Function to update total calories display
+        function updateTotalCalories() {
+            var totalCalories = calculateTotalCalories();
+            document.getElementById('total-calories').innerText = 'Total Calories: ' + totalCalories;
+        }
+
+        // Event listener for checkboxes
+        var checkboxes = document.querySelectorAll('.checkbox');
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', updateTotalCalories);
+        });
+
+        // Function to generate receipt
+        function generateReceipt() {
+            var selectedItems = [];
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.checked) {
+                    var row = checkbox.parentElement.parentElement;
+                    var item = row.cells
+                    var item = row.cells[0].innerText;
+                    selectedItems.push(item);
+                }
+            });
+            if (selectedItems.length === 0) {
+                alert('Please select at least one item.');
+            } else {
+                var receipt = 'Receipt:\n\n';
+                selectedItems.forEach(function(item, index) {
+                    receipt += (index + 1) + '. ' + item + '\n';
+                });
+                alert(receipt);
+            }
+        }
+    </script>
+    <button class="button" onclick="window.location.href='page19.html'">Next</button>
+</body>
+</html>

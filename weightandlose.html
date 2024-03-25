@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lose Weight Program - Food Recommendations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .day {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .day h2 {
+            margin-top: 0;
+        }
+        .meal {
+            margin-bottom: 10px;
+        }
+        .meal h3 {
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+  <body>
+    <h1>Lose Weight Program - Food Recommendations</h1>
+    
+    <!-- Day 1 -->
+    <div class="day">
+        <h2>Day 1</h2>
+        <!-- Breakfast -->
+        <div class="meal">
+            <h3>Breakfast</h3>
+            <table>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                    <th>Protein (g)</th>
+                    <th>Carbs (g)</th>
+                    <th>Fat (g)</th>
+                    <th>Selected</th>
+                </tr>
+                <tr>
+                    <td>2 Scrambled Eggs (140g)</td>
+                    <td>188</td>
+                    <td>14</td>
+                    <td>1</td>
+                    <td>14</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>2 slices Whole Wheat Toast</td>
+                    <td>160</td>
+                    <td>8</td>
+                    <td>28</td>
+                    <td>2</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Half Avocado</td>
+                    <td>120</td>
+                    <td>2</td>
+                    <td>6</td>
+                    <td>10</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Snack 1 -->
+        <div class="meal">
+            <h3>Snack 1</h3>
+            <table>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                    <th>Protein (g)</th>
+                    <th>Carbs (g)</th>
+                    <th>Fat (g)</th>
+                    <th>Selected</th>
+                </tr>
+                <tr>
+                    <td>Small Apple</td>
+                    <td>80</td>
+                    <td>0</td>
+                    <td>21</td>
+                    <td>0</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>1 tbsp Peanut Butter</td>
+                    <td>100</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Lunch -->
+        <div class="meal">
+            <h3>Lunch</h3>
+            <table>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                    <th>Protein (g)</th>
+                    <th>Carbs (g)</th>
+                    <th>Fat (g)</th>
+                    <th>Selected</th>
+                </tr>
+                <tr>
+                    <td>Grilled Chicken Salad with Veggies</td>
+                    <td>350</td>
+                    <td>30</td>
+                    <td>5</td>
+                    <td>20</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>1 tbsp Olive Oil for Dressing</td>
+                    <td>100</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>12</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Snack 2 -->
+        <div class="meal">
+            <h3>Snack 2</h3>
+            <table>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                    <th>Protein (g)</th>
+                    <th>Carbs (g)</th>
+                    <th>Fat (g)</th>
+                    <th>Selected</th>
+                </tr>
+                <tr>
+                    <td>20g Almonds</td>
+                    <td>120</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>10</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Greek Yogurt (100g)</td>
+                    <td>30</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Dinner -->
+        <div class="meal">
+            <h3>Dinner</h3>
+            <table>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                    <th>Protein (g)</th>
+                    <th>Carbs (g)</th>
+                    <th>Fat (g)</th>
+                    <th>Selected</th>
+                </tr>
+                <tr>
+                    <td>Baked Salmon (150g)</td>
+                    <td>300</td>
+                    <td>33</td>
+                    <td>0</td>
+                    <td>17</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Quinoa (100g cooked)</td>
+                    <td>120</td>
+                    <td>4</td>
+                    <td>21</td>
+                    <td>2</td
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Steamed Broccoli</td>
+                        <td>50</td>
+                        <td>3</td>
+                        <td>10</td>
+                        <td>0</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    <!-- Day 2 -->
+<div class="day">
+    <h2>Day 2</h2>
+    <!-- Breakfast -->
+    <div class="meal">
+        <h3>Breakfast</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>Smoothie (1 Banana, 150g Greek Yogurt, 50g Berries, 1 tbsp Chia Seeds)</td>
+                <td>300</td>
+                <td>20</td>
+                <td>40</td>
+                <td>15</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Snack 1 -->
+    <div class="meal">
+        <h3>Snack 1</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>1 Orange</td>
+                <td>80</td>
+                <td>1</td>
+                <td>21</td>
+                <td>0</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>1/4 cup Mixed Nuts</td>
+                <td>70</td>
+                <td>2</td>
+                <td>6</td>
+                <td>5</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Lunch -->
+    <div class="meal">
+        <h3>Lunch</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>Lentil Soup (200g)</td>
+                <td>150</td>
+                <td>8</td>
+                <td>22</td>
+                <td>1</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Whole Wheat Pita Bread (1 piece)</td>
+                <td>200</td>
+                <td>8</td>
+                <td>40</td>
+                <td>2</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Hummus (2 tbsp)</td>
+                <td>100</td>
+                <td>4</td>
+                <td>6</td>
+                <td>7</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Snack 2 -->
+    <div class="meal">
+        <h3>Snack 2</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>1 small Pear</td>
+                <td>80</td>
+                <td>0</td>
+                <td>21</td>
+                <td>0</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>2 Rice Cakes with 1 tbsp Almond Butter</td>
+                <td>70</td>
+                <td>2</td>
+                <td>13</td>
+                <td>2</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Dinner -->
+    <div class="meal">
+        <h3>Dinner</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>Grilled Chicken Breast (150g)</td>
+                <td>200</td>
+                <td>48</td>
+                <td>0</td>
+                <td>3</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Roasted Sweet Potatoes (150g)</td>
+                <td>150</td>
+                <td>2</td>
+                <td>36</td>
+                <td>0</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Steamed Asparagus (100g)</td>
+                <td>50</td>
+                <td>3</td>
+                <td>10</td>
+                <td>0</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>1 tbsp Olive Oil for Cooking</td>
+                <td>100</td>
+                <td>0</td>
+                <td>0</td>
+                <td>14</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Day 3 -->
+<div class="day">
+    <h2>Day 3</h2>
+    <!-- Breakfast -->
+    <div class="meal">
+        <h3>Breakfast</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>Oatmeal with Almond Milk (1/2 cup oats, 1 cup almond milk)</td>
+                <td>250</td>
+                <td>10</td>
+                <td>40</td>
+                <td>5</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>1 Medium Apple</td>
+                <td>95</td>
+                <td>0</td>
+                <td>25</td>
+                <td>0</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>1 tbsp Almond Butter</td>
+                <td>100</td>
+                <td>3</td>
+                <td>4</td>
+                <td>9</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Snack 1 -->
+    <div class="meal">
+        <h3>Snack 1</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>Greek Yogurt (150g)</td>
+                <td>100</td>
+                <td>10</td>
+                <td>6</td>
+                <td>5</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Handful of Grapes</td>
+                <td>60</td>
+                <td>1</td>
+                <td>15</td>
+                <td>0</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Lunch -->
+    <div class="meal">
+        <h3>Lunch</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>Quinoa Salad (1 cup cooked quinoa, mixed vegetables, 2 tbsp vinaigrette dressing)</td>
+                <td>300</td>
+                <td>8</td>
+                <td>45</td>
+                <td>10</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Snack 2 -->
+    <div class="meal">
+        <h3>Snack 2</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>Cottage Cheese (100g)</td>
+                <td>90</td>
+                <td>11</td>
+                <td>3</td>
+                <td>4</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Carrot Sticks with Hummus (1/2 cup hummus)</td>
+                <td>150</td>
+                <td>4</td>
+                <td>20</td>
+                <td>7</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Dinner -->
+    <div class="meal">
+        <h3>Dinner</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>Salmon Fillet (150g)</td>
+                <td>250</td>
+                <td>30</td>
+                <td>0</td>
+                <td>12</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Quinoa (1/2 cup cooked)</td>
+                <td>100</td>
+                <td>4</td>
+                <td>20</td>
+                <td>1</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Steamed Broccoli (1 cup)</td>
+                <td>50</td>
+                <td>3</td>
+                <td>10</td>
+                <td>0</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Olive Oil for Cooking (1 tbsp)</td>
+                <td>120</td>
+                <td>0</td>
+                <td>0</td>
+                <td>14</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Day 4 -->
+<div class="day">
+    <h2>Day 4</h2>
+    <!-- Breakfast -->
+    <div class="meal">
+        <h3>Breakfast</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>Scrambled Eggs (2 eggs)</td>
+                <td>140</td>
+                <td>12</td>
+                <td>1</td>
+                <td>10</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Whole Wheat Toast (1 slice)</td>
+                <td>70</td>
+                <td>3</td>
+                <td>12</td>
+                <td>1</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>1/2 Avocado</td>
+                <td>115</td>
+                <td>1</td>
+                <td>6</td>
+                <td>10</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Snack 1 -->
+    <div class="meal">
+        <h3>Snack 1</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>Protein Bar</td>
+                <td>200</td>
+                <td>20</td>
+                <td>25</td>
+                <td>5</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Lunch -->
+    <div class="meal">
+        <h3>Lunch</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>Grilled Chicken Breast (6 oz)</td>
+                <td>280</td>
+                <td>55</td>
+                <td>0</td>
+                <td>6</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Steamed Brown Rice (1 cup)</td>
+                <td>220</td>
+                <td>5</td>
+                <td>45</td>
+                <td>2</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Side Salad with Balsamic Dressing</td>
+                <td>50</td>
+                <td>1</td>
+                <td>5</td>
+                <td>3</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Snack 2 -->
+    <div class="meal">
+        <h3>Snack 2</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>Plain Rice Cakes (2)</td>
+                <td>70</td>
+                <td>1</td>
+                <td>15</td>
+                <td>0</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Peanut Butter (2 tbsp)</td>
+                <td>190</td>
+                <td>8</td>
+                <td>7</td>
+                <td>16</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Dinner -->
+    <div class="meal">
+        <h3>Dinner</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>Grilled Salmon (6 oz)</td>
+                <td>350</td>
+                <td>40</td>
+                <td>0</td>
+                <td>20</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Quinoa (1/2 cup cooked)</td>
+                <td>100</td>
+                <td>4</td>
+                <td>20</td>
+                <td>1</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Steamed Asparagus (1 cup)</td>
+                <td>30</td>
+                <td>3</td>
+                <td>5</td>
+                <td>0</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>1 tbsp Olive Oil</td>
+                <td>120</td>
+                <td>0</td>
+                <td>0</td>
+                <td>14</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Day 5 -->
+<div class="day">
+    <h2>Day 5</h2>
+    <!-- Breakfast -->
+    <div class="meal">
+        <h3>Breakfast</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>Scrambled Eggs</td>
+                <td>210</td>
+                <td>13</td>
+                <td>1</td>
+                <td>17</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Whole Wheat Toast</td>
+                <td>80</td>
+                <td>3</td>
+                <td>15</td>
+                <td>1</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Snack 1 -->
+    <div class="meal">
+        <h3>Snack 1</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>Greek Yogurt</td>
+                <td>100</td>
+                <td>10</td>
+                <td>6</td>
+                <td>2</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Lunch -->
+    <div class="meal">
+        <h3>Lunch</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>Grilled Chicken Breast</td>
+                <td>230</td>
+                <td>27</td>
+                <td>0</td>
+                <td>12</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Snack 2 -->
+    <div class="meal">
+        <h3>Snack 2</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>Almonds</td>
+                <td>160</td>
+                <td>6</td>
+                <td>6</td>
+                <td>14</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Dinner -->
+    <div class="meal">
+        <h3>Dinner</h3>
+        <table>
+            <tr>
+                <th>Food Items</th>
+                <th>Calories</th>
+                <th>Protein (g)</th>
+                <th>Carbs (g)</th>
+                <th>Fat (g)</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td>Salmon Fillet</td>
+                <td>280</td>
+                <td>22</td>
+                <td>0</td>
+                <td>20</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+        <script>
+            // Add event listeners to all checkboxes
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(function(checkbox) {
+                checkbox.addEventListener('change', function() {
+                    // Get the row of the checkbox
+                    var row = this.parentNode.parentNode;
+                    // If checkbox is checked, apply a background color to the row
+                    if (this.checked) {
+                        row.style.backgroundColor = '#c7e0f4';
+                    } else {
+                        row.style.backgroundColor = 'transparent';
+                    }
+                });
+            });
+        </script>
+    </body>
+    <script>
+        // Function to calculate total calories and display receipt
+        function calculateTotalCalories() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            var totalCalories = 0;
+            var selectedItems = [];
+
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.checked) {
+                    var row = checkbox.parentNode.parentNode;
+                    var foodItem = row.cells[0].innerText;
+                    var calories = parseInt(row.cells[1].innerText);
+                    totalCalories += calories;
+                    selectedItems.push(foodItem);
+                }
+            });
+
+            // Display receipt
+            var receipt = "Receipt:\n";
+            selectedItems.forEach(function(item) {
+                receipt += "- " + item + "\n";
+            });
+            receipt += "\nTotal Calories: " + totalCalories;
+
+            alert(receipt); // You can replace this with your preferred way of displaying the receipt
+        }
+
+        // Add event listener to calculate button
+        var calculateButton = document.getElementById('calculateButton');
+        calculateButton.addEventListener('click', calculateTotalCalories);
+    </script>
+</body>
+</html>

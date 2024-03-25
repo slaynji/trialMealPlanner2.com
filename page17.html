@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Gain Program - Food Recommendations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: rgba(16, 77, 138, 0.8);
+        }
+        h1 {
+            text-align: center;
+            color: #000000;
+        }
+        .day {
+            background-color: #c3d5ee;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgb(82, 149, 220);
+            margin-bottom: 20px;
+        }
+        .day h2 {
+            margin-top: 0;
+        }
+        .meal {
+            margin-bottom: 10px;
+        }
+        .meal h3 {
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Weight Gain Program - Food Recommendations</h1>
+    <div class="day">
+        <h2>Day 4</h2>
+        <!-- Breakfast -->
+        <div class="meal">
+            <h3>Breakfast</h3>
+            <table>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                    <th>Select</th>
+                </tr>
+                <tr>
+                    <td>50g Granola, 30g Oats, 150ml Whole Milk</td>
+                    <td>443</td>
+                    <td><input type="checkbox" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>25g Nuts & 25g Raisins</td>
+                    <td>241</td>
+                    <td><input type="checkbox" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Glass of Orange Juice</td>
+                    <td>118</td>
+                    <td><input type="checkbox" class="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Snack 1 -->
+        <div class="meal">
+            <h3>Snack 1</h3>
+            <table>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                    <th>Select</th>
+                </tr>
+                <tr>
+                    <td>Banana</td>
+                    <td>105</td>
+                    <td><input type="checkbox" class="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Lunch -->
+        <div class="meal">
+            <h3>Lunch</h3>
+            <table>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                    <th>Select</th>
+                </tr>
+                <tr>
+                    <td>1 serving Squash, Lentil & Bean One-Pot (Recipe)</td>
+                    <td>608</td>
+                    <td><input type="checkbox" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Fruit Yogurt</td>
+                    <td>150</td>
+                    <td><input type="checkbox" class="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Snack 2 -->
+        <div class="meal">
+            <h3>Snack 2</h3>
+            <table>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                    <th>Select</th>
+                </tr>
+                <tr>
+                    <td>30g Cheese, 2 Rye Crackers</td>
+                    <td>203</td>
+                    <td><input type="checkbox" class="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Dinner -->
+        <div class="meal">
+            <h3>Dinner</h3>
+            <table>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                    <th>Select</th>
+                </tr>
+                <tr>
+                    <td>1 serving Bolognaise (Recipe)</td>
+                    <td>318</td>
+                    <td><input type="checkbox" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>150g Whole-Wheat Spaghetti</td>
+                    <td>510</td>
+                    <td><input type="checkbox" class="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Mixed Salad Leaves, 1 tbsp Olive Oil, seasoning</td>
+                    <td>131</td>
+                    <td><input type="checkbox" class="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Snack 3 -->
+        <div class="meal">
+            <h3>Snack 3</h3>
+            <table>
+                <tr>
+                    <th>Food Items</th>
+                    <th>Calories</th>
+                    <th>Select</th>
+                </tr>
+                <tr>
+                    <td>9 Dried Apricots</td>
+                    <td>180</td>
+                    <td><input type="checkbox" class="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Total Calories -->
+    <div id="total-calories"></div>
+
+    <!-- Receipt Button -->
+    <button onclick="generateReceipt()">Generate Receipt</button>
+
+    <script>
+        // Function to calculate total calories
+        function calculateTotalCalories() {
+            var checkboxes = document.querySelectorAll('.checkbox');
+            var totalCalories = 0;
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.checked) {
+                    var row = checkbox.parentElement.parentElement;
+                    var calories = parseInt(row.cells[1].innerText);
+                    totalCalories += calories;
+                }
+            });
+            return totalCalories;
+        }
+
+        // Function to update total calories display
+        function updateTotalCalories() {
+            var totalCalories = calculateTotalCalories();
+            document.getElementById('total-calories').innerText = 'Total Calories: ' + totalCalories;
+        }
+
+        // Event listener for checkboxes
+        var checkboxes = document.querySelectorAll('.checkbox');
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', updateTotalCalories);
+        });
+
+        // Function to generate receipt
+        function generateReceipt() {
+            var selectedItems = [];
+            var totalCalories = 0;
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.checked) {
+                    var row = checkbox.parentElement.parentElement;
+                    var item = row.cells[0].innerText;
+                    var calories = parseInt(row.cells[1].innerText);
+                    selectedItems.push({ item: item, calories: calories });
+                    totalCalories += calories;
+                }
+            });
+            if (selectedItems.length === 0) {
+                alert('Please select at least one item.');
+            } else {
+                var receipt = 'Receipt:\n\n';
+                selectedItems.forEach(function(item, index) {
+                    receipt += (index + 1) + '. ' + item.item + ' - ' + item.calories + ' Calories\n';
+                });
+                receipt += '\nTotal Calories: ' + totalCalories;
+                alert(receipt);
+            }
+        }
+    </script>
+    <button class="button" onclick="window.location.href='page18.html'">Next</button>
+</body>
+</html>
+
